@@ -5,6 +5,7 @@ final: prev: {
   deps-set = prev.pkgs.callPackage (import ./deps-set.nix) {};
   deps-srcs = prev.pkgs.callPackage (import ./deps-srcs.nix) {};
   deps-unpack = prev.pkgs.callPackage (import ./deps-unpack.nix) {};
+  nix-project-lib = (import (import ./external).nix-project).nix-project-lib;
   tags-dynamic = prev.pkgs.callPackage (import ./tags-dynamic.nix) {};
   tags-static = prev.pkgs.callPackage (import ./tags-static.nix) {};
 
